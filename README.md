@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Grub Cookbook
 [![License](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
@@ -34,3 +35,7 @@ override['grub']['config']['settings']['distributor'] = "$(sed 's, release .*$,,
 override['grub']['config']['settings']['terminal_output'] = "console"
 ```
 
+=======
+# securetty-cookbook
+securetty-cookbook
+>>>>>>> 1e4276e4c46148a25e5358d44b755257ceb43fcf
