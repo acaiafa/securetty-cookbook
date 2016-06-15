@@ -23,7 +23,7 @@ module SecurettyCookbook
       action(:create) do
         notifying_block do
           # Write out securetty config file
-          unless new_resource.ttys.nil?
+          unless new_resource.ttys.nil? || new_resource.ttys.empty?
             template new_resource.path do
               source 'securetty.erb'
               cookbook new_resource.cookbook
