@@ -18,7 +18,7 @@ module SecurettyCookbook
 
       attribute(:path, kind_of: String, name_attribute: true)
       attribute(:cookbook, kind_of: String, default: 'securetty')
-      attribute(:ttys, kind_of: Array, default: [])
+      attribute(:ttys, kind_of: [Array, NilClass], default: nil)
 
       action(:create) do
         notifying_block do
@@ -27,7 +27,6 @@ module SecurettyCookbook
             template new_resource.path do
               source 'securetty.erb'
               cookbook new_resource.cookbook
-              variables resource: new_resource
               mode 0644
               owner 'root'
               group 'root'
