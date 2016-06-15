@@ -7,7 +7,7 @@ Vagrant.configure('2') do |config|
 
   config.vm.define :instance, primary: true do |guest|
     guest.vm.provision :chef_zero do |chef|
-      chef.run_list = %w{grub::default}
+      chef.run_list = %w{securetty::default}
     end
   end
 end
